@@ -55,7 +55,7 @@
                 tools:text="$100,000" />
 
         </androidx.constraintlayout.widget.ConstraintLayout>
-        
+
     </ScrollView>
-    
+
 </layout>

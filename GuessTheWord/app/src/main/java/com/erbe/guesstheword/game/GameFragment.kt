@@ -34,7 +34,8 @@ class GameFragment : Fragment() {
             inflater,
             R.layout.game_fragment,
             container,
-            false)
+            false
+        )
 
         Log.i("GameFragment", "Called ViewModelProvider.get")
 

@@ -12,7 +12,8 @@ import kotlinx.coroutines.launch
  */
 class SleepTrackerViewModel(
     dataSource: SleepDatabaseDao,
-    application: Application) : ViewModel() {
+    application: Application
+) : ViewModel() {
 
     /**
      * Hold a reference to SleepDatabase via SleepDatabaseDao.

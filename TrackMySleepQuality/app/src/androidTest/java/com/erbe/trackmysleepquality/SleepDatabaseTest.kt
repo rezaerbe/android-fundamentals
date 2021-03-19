@@ -6,13 +6,13 @@ import androidx.test.platform.app.InstrumentationRegistry
 import com.erbe.trackmysleepquality.database.SleepDatabase
 import com.erbe.trackmysleepquality.database.SleepDatabaseDao
 import com.erbe.trackmysleepquality.database.SleepNight
+import kotlinx.coroutines.runBlocking
 import org.junit.After
 import org.junit.Assert.assertEquals
 import org.junit.Before
 import org.junit.Test
 import org.junit.runner.RunWith
 import java.io.IOException
-
 /**
  * This is not meant to be a full set of tests. For simplicity, most of your samples do not
  * include tests. However, when building the Room, it is helpful to make sure it works before
@@ -46,7 +46,7 @@ class SleepDatabaseTest {
 
     @Test
     @Throws(Exception::class)
-    fun insertAndGetNight() {
+    fun insertAndGetNight() = runBlocking {
         // For testing -> insert() and getTonight() must not suspend function!
         val night = SleepNight()
         sleepDao.insert(night)

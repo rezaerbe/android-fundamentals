@@ -1,9 +1,9 @@
 package com.erbe.diceroller
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * DiceRoller demonstrates simple interactivity in an Android app.
@@ -12,8 +12,8 @@ import android.widget.ImageView
  */
 class MainActivity : AppCompatActivity() {
 
-    lateinit var diceImage : ImageView
-    lateinit var diceImage2 : ImageView
+    lateinit var diceImage: ImageView
+    lateinit var diceImage2: ImageView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -35,7 +35,7 @@ class MainActivity : AppCompatActivity() {
         diceImage2.setImageResource(getRandomDiceImage())
     }
 
-    private fun getRandomDiceImage() : Int {
+    private fun getRandomDiceImage(): Int {
         val randomInt = (1..6).random()
 
         return when (randomInt) {

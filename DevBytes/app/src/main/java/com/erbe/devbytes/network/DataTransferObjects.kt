@@ -34,7 +34,8 @@ data class NetworkVideo(
     val url: String,
     val updated: String,
     val thumbnail: String,
-    val closedCaption: String?)
+    val closedCaption: String?
+)
 
 /**
  * Convert Network results to domain objects
@@ -46,7 +47,8 @@ fun NetworkVideoContainer.asDomainModel(): List<DevByteVideo> {
             description = it.description,
             url = it.url,
             updated = it.updated,
-            thumbnail = it.thumbnail)
+            thumbnail = it.thumbnail
+        )
     }
 }
 
@@ -60,6 +62,7 @@ fun NetworkVideoContainer.asDatabaseModel(): List<DatabaseVideo> {
             description = it.description,
             url = it.url,
             updated = it.updated,
-            thumbnail = it.thumbnail)
+            thumbnail = it.thumbnail
+        )
     }
 }

@@ -10,5 +10,4 @@ class ClickerApplication : Application() {
 
         Timber.plant(Timber.DebugTree())
     }
-
 }

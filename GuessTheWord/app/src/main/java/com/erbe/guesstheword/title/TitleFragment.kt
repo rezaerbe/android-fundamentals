@@ -13,7 +13,7 @@ import com.erbe.guesstheword.databinding.TitleFragmentBinding
 /**
  * Fragment for the starting or title screen of the app
  */
-class TitleFragment: Fragment() {
+class TitleFragment : Fragment() {
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -22,7 +22,8 @@ class TitleFragment: Fragment() {
     ): View? {
         // Inflate the layout for this fragment
         val binding: TitleFragmentBinding = DataBindingUtil.inflate(
-                inflater, R.layout.title_fragment, container, false)
+            inflater, R.layout.title_fragment, container, false
+        )
 
         binding.playGameButton.setOnClickListener {
             findNavController().navigate(TitleFragmentDirections.actionTitleToGame())

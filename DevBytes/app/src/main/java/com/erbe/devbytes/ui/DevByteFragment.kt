@@ -61,7 +61,8 @@ class DevByteFragment : Fragment() {
             inflater,
             R.layout.fragment_dev_byte,
             container,
-            false)
+            false
+        )
 
         // Set the lifecycleOwner so DataBinding can observe LiveData
         binding.lifecycleOwner = viewLifecycleOwner
@@ -91,9 +92,11 @@ class DevByteFragment : Fragment() {
         }
 
         // Observer for the network error.
-        viewModel.eventNetworkError.observe(viewLifecycleOwner, Observer<Boolean> { isNetworkError ->
-            if (isNetworkError) onNetworkError()
-        })
+        viewModel.eventNetworkError.observe(
+            viewLifecycleOwner,
+            Observer<Boolean> { isNetworkError ->
+                if (isNetworkError) onNetworkError()
+            })
 
         return binding.root
     }
@@ -159,7 +162,8 @@ class DevByteAdapter(val callback: VideoClick) : RecyclerView.Adapter<DevByteVie
             LayoutInflater.from(parent.context),
             DevByteViewHolder.LAYOUT,
             parent,
-            false)
+            false
+        )
         return DevByteViewHolder(withDataBinding)
     }
 

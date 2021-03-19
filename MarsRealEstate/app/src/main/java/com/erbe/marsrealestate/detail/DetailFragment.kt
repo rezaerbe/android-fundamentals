@@ -28,7 +28,8 @@ class DetailFragment : Fragment() {
         val marsProperty = DetailFragmentArgs.fromBundle(requireArguments()).selectedProperty
         val viewModelFactory = DetailViewModelFactory(marsProperty, application)
         binding.viewModel = ViewModelProvider(
-            this, viewModelFactory).get(DetailViewModel::class.java)
+            this, viewModelFactory
+        ).get(DetailViewModel::class.java)
 
         return binding.root
     }

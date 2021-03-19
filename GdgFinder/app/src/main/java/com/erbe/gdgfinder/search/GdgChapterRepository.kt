@@ -151,7 +151,8 @@ class GdgChapterRepository(gdgApiService: GdgApiService) {
                     val filters: List<String> = chapters.map { it.region }.distinctBy { it }
 
                     // group the chapters by region so that filter queries don't require any work
-                    val chapterByRegion: Map<String, List<GdgChapter>> = chapters.groupBy { it.region }
+                    val chapterByRegion: Map<String, List<GdgChapter>> =
+                        chapters.groupBy { it.region }
 
                     // return the sorted result
                     SortedData(chapters, filters, chapterByRegion)
@@ -174,7 +175,13 @@ class GdgChapterRepository(gdgApiService: GdgApiService) {
              */
             private fun distanceBetween(start: LatLong, currentLocation: Location): Float {
                 val results = FloatArray(3)
-                Location.distanceBetween(start.lat, start.long, currentLocation.latitude, currentLocation.longitude, results)
+                Location.distanceBetween(
+                    start.lat,
+                    start.long,
+                    currentLocation.latitude,
+                    currentLocation.longitude,
+                    results
+                )
                 return results[0]
             }
         }

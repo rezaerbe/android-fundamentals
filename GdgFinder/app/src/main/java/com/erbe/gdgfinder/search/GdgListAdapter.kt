@@ -8,7 +8,8 @@ import androidx.recyclerview.widget.RecyclerView
 import com.erbe.gdgfinder.databinding.ListItemBinding
 import com.erbe.gdgfinder.network.GdgChapter
 
-class GdgListAdapter(val clickListener: GdgClickListener): ListAdapter<GdgChapter, GdgListAdapter.GdgListViewHolder>(DiffCallback) {
+class GdgListAdapter(val clickListener: GdgClickListener) :
+    ListAdapter<GdgChapter, GdgListAdapter.GdgListViewHolder>(DiffCallback) {
 
     companion object DiffCallback : DiffUtil.ItemCallback<GdgChapter>() {
         override fun areItemsTheSame(oldItem: GdgChapter, newItem: GdgChapter): Boolean {
@@ -20,8 +21,8 @@ class GdgListAdapter(val clickListener: GdgClickListener): ListAdapter<GdgChapte
         }
     }
 
-    class GdgListViewHolder(private var binding: ListItemBinding):
-            RecyclerView.ViewHolder(binding.root) {
+    class GdgListViewHolder(private var binding: ListItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(listener: GdgClickListener, gdgChapter: GdgChapter) {
             binding.chapter = gdgChapter

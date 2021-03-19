@@ -110,5 +110,5 @@
             app:srcCompat="@drawable/ic_sleep_5" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    
+
 </layout>

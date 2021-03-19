@@ -53,6 +53,7 @@ class DevByteApplication : Application() {
         WorkManager.getInstance().enqueueUniquePeriodicWork(
             RefreshDataWorker.WORK_NAME,
             ExistingPeriodicWorkPolicy.KEEP,
-            repeatingRequest)
+            repeatingRequest
+        )
     }
 }

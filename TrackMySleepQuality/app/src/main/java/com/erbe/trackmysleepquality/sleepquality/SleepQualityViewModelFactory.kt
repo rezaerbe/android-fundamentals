@@ -3,7 +3,6 @@ package com.erbe.trackmysleepquality.sleepquality
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.ViewModelProvider
 import com.erbe.trackmysleepquality.database.SleepDatabaseDao
-import java.lang.IllegalArgumentException
 
 /**
  * This is pretty much boiler plate code for a ViewModel Factory.

@@ -73,7 +73,7 @@ class GdgListFragment : Fragment() {
                     val chip = inflator.inflate(R.layout.region, chipGroup, false) as Chip
                     chip.text = regionName
                     chip.tag = regionName
-                    chip.setOnCheckedChangeListener{ button, isChecked ->
+                    chip.setOnCheckedChangeListener { button, isChecked ->
                         viewModel.onFilterChanged(button.tag as String, isChecked)
                     }
                     chip
@@ -111,7 +111,11 @@ class GdgListFragment : Fragment() {
      */
     private fun requestLastLocationOrStartLocationUpdates() {
         // if we don't have permission ask for it and wait until the user grants it
-        if (ContextCompat.checkSelfPermission(requireContext(), LOCATION_PERMISSION) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(
+                requireContext(),
+                LOCATION_PERMISSION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
             requestLocationPermission()
             return
         }
@@ -132,7 +136,11 @@ class GdgListFragment : Fragment() {
      */
     private fun startLocationUpdates(fusedLocationClient: FusedLocationProviderClient) {
         // if we don't have permission ask for it and wait until the user grants it
-        if (ContextCompat.checkSelfPermission(requireContext(), LOCATION_PERMISSION) != PackageManager.PERMISSION_GRANTED) {
+        if (ContextCompat.checkSelfPermission(
+                requireContext(),
+                LOCATION_PERMISSION
+            ) != PackageManager.PERMISSION_GRANTED
+        ) {
             requestLocationPermission()
             return
         }

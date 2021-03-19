@@ -3,26 +3,22 @@ package com.erbe.recyclerview.sleeptracker
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import android.widget.ImageView
-import android.widget.TextView
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
 import com.erbe.recyclerview.R
-import com.erbe.recyclerview.convertDurationToFormatted
-import com.erbe.recyclerview.convertNumericQualityToString
 import com.erbe.recyclerview.database.SleepNight
 import com.erbe.recyclerview.databinding.ListItemSleepNightBinding
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
-import java.lang.ClassCastException
 
 private val ITEM_VIEW_TYPE_HEADER = 0
 private val ITEM_VIEW_TYPE_ITEM = 1
 
-class SleepNightAdapter(val clickListener: SleepNightListener) : ListAdapter<DataItem, RecyclerView.ViewHolder>(SleepNightDiffCallback()) {
+class SleepNightAdapter(val clickListener: SleepNightListener) :
+    ListAdapter<DataItem, RecyclerView.ViewHolder>(SleepNightDiffCallback()) {
 
     private val adapterScope = CoroutineScope(Dispatchers.Default)
 
@@ -68,7 +64,7 @@ class SleepNightAdapter(val clickListener: SleepNightListener) : ListAdapter<Dat
         }
     }
 
-    class TextViewHolder(view: View): RecyclerView.ViewHolder(view) {
+    class TextViewHolder(view: View) : RecyclerView.ViewHolder(view) {
         companion object {
             fun from(parent: ViewGroup): TextViewHolder {
                 val layoutInflater = LayoutInflater.from(parent.context)
@@ -78,7 +74,8 @@ class SleepNightAdapter(val clickListener: SleepNightListener) : ListAdapter<Dat
         }
     }
 
-    class ViewHolder private constructor(val binding: ListItemSleepNightBinding) : RecyclerView.ViewHolder(binding.root) {
+    class ViewHolder private constructor(val binding: ListItemSleepNightBinding) :
+        RecyclerView.ViewHolder(binding.root) {
 
         fun bind(item: SleepNight, clickListener: SleepNightListener) {
             binding.sleep = item
@@ -112,11 +109,11 @@ class SleepNightListener(val clickListener: (sleepId: Long) -> Unit) {
 }
 
 sealed class DataItem {
-    data class SleepNightItem(val sleepNight: SleepNight): DataItem() {
+    data class SleepNightItem(val sleepNight: SleepNight) : DataItem() {
         override val id = sleepNight.nightId
     }
 
-    object Header: DataItem() {
+    object Header : DataItem() {
         override val id = Long.MIN_VALUE
     }
 

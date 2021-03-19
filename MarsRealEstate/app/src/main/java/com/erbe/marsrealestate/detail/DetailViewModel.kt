@@ -12,8 +12,10 @@ import com.erbe.marsrealestate.network.MarsProperty
  *  The [ViewModel] associated with the [DetailFragment], containing information about the selected
  *  [MarsProperty].
  */
-class DetailViewModel(marsProperty: MarsProperty,
-                        app: Application) : AndroidViewModel(app) {
+class DetailViewModel(
+    marsProperty: MarsProperty,
+    app: Application
+) : AndroidViewModel(app) {
 
     // The internal MutableLiveData for the selected property
     private val _selectedProperty = MutableLiveData<MarsProperty>()
@@ -34,18 +36,21 @@ class DetailViewModel(marsProperty: MarsProperty,
             when (it.isRental) {
                 true -> R.string.type_rent
                 false -> R.string.display_price
-            }, it.price)
+            }, it.price
+        )
     }
 
     // The displayPropertyType formatted Transformation Map LiveData, which displays the
     // "For Rent/Sale" String
     val displayPropertyType = Transformations.map(selectedProperty) {
-        app.applicationContext.getString(R.string.display_type,
+        app.applicationContext.getString(
+            R.string.display_type,
             app.applicationContext.getString(
                 when (it.isRental) {
                     true -> R.string.type_rent
                     false -> R.string.type_sale
                 }
-            ))
+            )
+        )
     }
 }

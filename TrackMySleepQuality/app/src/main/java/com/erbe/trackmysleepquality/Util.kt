@@ -7,7 +7,6 @@ import android.text.Html
 import android.text.Spanned
 import androidx.core.text.HtmlCompat
 import com.erbe.trackmysleepquality.database.SleepNight
-import java.lang.StringBuilder
 import java.text.SimpleDateFormat
 
 /**
@@ -42,7 +41,7 @@ fun convertNumericQualityToString(quality: Int, resources: Resources): String {
 @SuppressLint("SimpleDateFormat")
 fun convertLongToDateString(systemTime: Long): String {
     return SimpleDateFormat("EEEE MMM-dd-yyyy' Time: 'HH:mm")
-        .format(systemTime).toString()
+            .format(systemTime).toString()
 }
 
 /**

@@ -20,7 +20,8 @@ data class DatabaseVideo constructor(
     val updated: String,
     val title: String,
     val description: String,
-    val thumbnail: String)
+    val thumbnail: String
+)
 
 /**
  * Map DatabaseVideos to domain entities
@@ -32,6 +33,7 @@ fun List<DatabaseVideo>.asDomainModel(): List<DevByteVideo> {
             title = it.title,
             description = it.description,
             updated = it.updated,
-            thumbnail = it.thumbnail)
+            thumbnail = it.thumbnail
+        )
     }
 }

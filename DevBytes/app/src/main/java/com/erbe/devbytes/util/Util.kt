@@ -1,7 +1,5 @@
 package com.erbe.devbytes.util
 
-import java.lang.StringBuilder
-
 private val PUNCTUATION = listOf(", ", "; ", ": ", " ")
 
 /**

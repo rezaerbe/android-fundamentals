@@ -1,11 +1,11 @@
 package com.erbe.dessertclicker
 
 import android.content.ActivityNotFoundException
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.Menu
 import android.view.MenuItem
 import android.widget.Toast
+import androidx.appcompat.app.AppCompatActivity
 import androidx.core.app.ShareCompat
 import androidx.databinding.DataBindingUtil
 import com.erbe.dessertclicker.databinding.ActivityMainBinding
@@ -20,7 +20,7 @@ class MainActivity : AppCompatActivity() {
 
     private var revenue = 0
     private var dessertsSold = 0
-    private lateinit var dessertTimer : DessertTimer
+    private lateinit var dessertTimer: DessertTimer
 
     // Contains all the views
     private lateinit var binding: ActivityMainBinding
@@ -73,7 +73,7 @@ class MainActivity : AppCompatActivity() {
             revenue = savedInstanceState.getInt(KEY_REVENUE, 0)
             dessertsSold = savedInstanceState.getInt(KEY_DESSERT_SOLD, 0)
             dessertTimer.secondsCount =
-                    savedInstanceState.getInt(KEY_TIMER_SECONDS, 0)
+                savedInstanceState.getInt(KEY_TIMER_SECONDS, 0)
 
             // Show the next dessert
             showCurrentDessert()
@@ -139,8 +139,10 @@ class MainActivity : AppCompatActivity() {
             startActivity(shareIntent)
             Toast.makeText(this, "Success", Toast.LENGTH_LONG).show()
         } catch (ex: ActivityNotFoundException) {
-            Toast.makeText(this, getString(R.string.sharing_not_available),
-                Toast.LENGTH_LONG).show()
+            Toast.makeText(
+                this, getString(R.string.sharing_not_available),
+                Toast.LENGTH_LONG
+            ).show()
         }
     }
 

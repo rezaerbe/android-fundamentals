@@ -9,7 +9,7 @@ import retrofit2.HttpException
 import timber.log.Timber
 
 class RefreshDataWorker(appContext: Context, params: WorkerParameters) :
-        CoroutineWorker(appContext, params) {
+    CoroutineWorker(appContext, params) {
 
     companion object {
         const val WORK_NAME = "com.erbe.devbytes.work.RefreshDataWorker"

@@ -2,7 +2,7 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.erbe.androidtrivia.TitleFragment">
+    tools:context=".TitleFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:id="@+id/titleConstraint"
@@ -18,7 +18,7 @@
             android:paddingStart="@dimen/button_padding"
             android:paddingEnd="@dimen/button_padding"
             android:text="Play"
-            android:textColor="@color/colorAccent"
+            android:textColor="@color/white"
             android:textSize="@dimen/button_text_size"
             android:textStyle="bold"
             app:layout_constraintBottom_toBottomOf="parent"
@@ -41,5 +41,5 @@
             app:srcCompat="@drawable/android_trivia" />
 
     </androidx.constraintlayout.widget.ConstraintLayout>
-    
+
 </layout>

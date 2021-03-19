@@ -4,10 +4,11 @@
     xmlns:tools="http://schemas.android.com/tools">
 
     <data>
-        <import type="android.view.View"/>
+        <import type="android.view.View" />
+
         <variable
             name="property"
-            type="com.erbe.marsrealestate.network.MarsProperty"/>
+            type="com.erbe.marsrealestate.network.MarsProperty" />
     </data>
 
     <FrameLayout
@@ -22,7 +23,7 @@
             android:padding="2dp"
             android:scaleType="centerCrop"
             app:imageUrl="@{property.imgSrcUrl}"
-            tools:src="@tools:sample/backgrounds/scenic"/>
+            tools:src="@tools:sample/backgrounds/scenic" />
 
         <ImageView
             android:id="@+id/mars_property_type"
@@ -34,8 +35,8 @@
             android:scaleType="fitCenter"
             android:visibility="@{property.rental ? View.GONE : View.VISIBLE}"
             android:src="@drawable/ic_for_sale_outline"
-            tools:src="@drawable/ic_for_sale_outline"/>
-        
+            tools:src="@drawable/ic_for_sale_outline" />
+
     </FrameLayout>
-    
+
 </layout>

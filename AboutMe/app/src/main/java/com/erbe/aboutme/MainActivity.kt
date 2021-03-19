@@ -1,10 +1,10 @@
 package com.erbe.aboutme
 
 import android.content.Context
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
 import android.view.inputmethod.InputMethodManager
+import androidx.appcompat.app.AppCompatActivity
 import androidx.databinding.DataBindingUtil
 import com.erbe.aboutme.databinding.ActivityMainBinding
 

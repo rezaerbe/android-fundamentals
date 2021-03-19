@@ -2,9 +2,10 @@
 <layout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.erbe.androidtrivia.InGame">
+    tools:context=".InGame">
 
     <data>
+
         <variable
             name="game"
             type="com.erbe.androidtrivia.GameFragment" />
@@ -118,9 +119,9 @@
                 app:layout_constraintEnd_toEndOf="parent"
                 app:layout_constraintStart_toStartOf="parent"
                 app:layout_constraintTop_toBottomOf="@+id/questionRadioGroup" />
-            
+
         </androidx.constraintlayout.widget.ConstraintLayout>
-        
+
     </ScrollView>
-    
+
 </layout>

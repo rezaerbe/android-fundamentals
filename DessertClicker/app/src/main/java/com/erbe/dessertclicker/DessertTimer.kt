@@ -22,7 +22,7 @@ import timber.log.Timber
  * https://developer.android.com/guide/components/processes-and-threads
  *
  */
-class DessertTimer(lifecycle : Lifecycle) : LifecycleObserver {
+class DessertTimer(lifecycle: Lifecycle) : LifecycleObserver {
 
     // The number of seconds counted since the timer started
     var secondsCount = 0

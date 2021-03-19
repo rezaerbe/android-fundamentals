@@ -1,7 +1,7 @@
 package com.erbe.trackmysleepquality
 
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import androidx.appcompat.app.AppCompatActivity
 
 /**
  * This main activity is just a container for our fragments,

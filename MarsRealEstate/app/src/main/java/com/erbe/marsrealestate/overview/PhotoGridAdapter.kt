@@ -13,15 +13,15 @@ import com.erbe.marsrealestate.network.MarsProperty
  * data, including computing diffs between lists.
  */
 class PhotoGridAdapter(private val onClickListener: OnClickListener) :
-        ListAdapter<MarsProperty,
-                PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
+    ListAdapter<MarsProperty,
+            PhotoGridAdapter.MarsPropertyViewHolder>(DiffCallback) {
 
     /**
      * The MarsPropertyViewHolder constructor takes the binding variable from the associated
      * GridViewItem, which nicely gives it access to the full [MarsProperty] information.
      */
-    class MarsPropertyViewHolder(private var binding: GridViewItemBinding):
-            RecyclerView.ViewHolder(binding.root) {
+    class MarsPropertyViewHolder(private var binding: GridViewItemBinding) :
+        RecyclerView.ViewHolder(binding.root) {
         fun bind(marsProperty: MarsProperty) {
             binding.property = marsProperty
             // This is important, because it forces the data binding to execute immediately,

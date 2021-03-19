@@ -2,7 +2,6 @@ package com.erbe.devbytes.ui
 
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
-import androidx.databinding.DataBindingUtil.setContentView
 import com.erbe.devbytes.R
 
 /**

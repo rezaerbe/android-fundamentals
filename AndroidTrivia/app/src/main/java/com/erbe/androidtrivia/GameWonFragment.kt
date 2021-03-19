@@ -11,19 +11,27 @@ import com.erbe.androidtrivia.databinding.FragmentGameWonBinding
 
 class GameWonFragment : Fragment() {
 
-    override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?,
-                              savedInstanceState: Bundle?): View? {
+    override fun onCreateView(
+        inflater: LayoutInflater, container: ViewGroup?,
+        savedInstanceState: Bundle?
+    ): View? {
 
         // Inflate the layout for this fragment
         val binding: FragmentGameWonBinding = DataBindingUtil.inflate(
-                inflater, R.layout.fragment_game_won, container, false)
+            inflater, R.layout.fragment_game_won, container, false
+        )
 
-        binding.nextMatchButton.setOnClickListener { view : View ->
-            view.findNavController().navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
+        binding.nextMatchButton.setOnClickListener { view: View ->
+            view.findNavController()
+                .navigate(GameWonFragmentDirections.actionGameWonFragmentToGameFragment())
         }
 
         val args = GameWonFragmentArgs.fromBundle(requireArguments())
-        Toast.makeText(context, "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}", Toast.LENGTH_LONG).show()
+        Toast.makeText(
+            context,
+            "NumCorrect: ${args.numCorrect}, NumQuestions: ${args.numQuestions}",
+            Toast.LENGTH_LONG
+        ).show()
 
         setHasOptionsMenu(true)
 
@@ -31,11 +39,14 @@ class GameWonFragment : Fragment() {
     }
 
     // Creating our Share Intent
-    private fun getShareIntent() : Intent {
+    private fun getShareIntent(): Intent {
         val args = GameWonFragmentArgs.fromBundle(requireArguments())
         val shareIntent = Intent(Intent.ACTION_SEND)
         shareIntent.setType("text/plain")
-                .putExtra(Intent.EXTRA_TEXT, getString(R.string.share_success_text, args.numCorrect, args.numQuestions))
+            .putExtra(
+                Intent.EXTRA_TEXT,
+                getString(R.string.share_success_text, args.numCorrect, args.numQuestions)
+            )
         return shareIntent
     }
 
@@ -63,5 +74,4 @@ class GameWonFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
-
 }

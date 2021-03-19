@@ -22,9 +22,9 @@ import com.erbe.trackmysleepquality.databinding.FragmentSleepQualityBinding
 class SleepQualityFragment : Fragment() {
 
     override fun onCreateView(
-        inflater: LayoutInflater,
-        container: ViewGroup?,
-        savedInstanceState: Bundle?
+            inflater: LayoutInflater,
+            container: ViewGroup?,
+            savedInstanceState: Bundle?
     ): View? {
 
         // Get a reference to the binding object and inflate the fragment views.

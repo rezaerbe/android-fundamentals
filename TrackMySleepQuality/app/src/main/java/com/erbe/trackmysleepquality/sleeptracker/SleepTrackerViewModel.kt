@@ -11,8 +11,8 @@ import kotlinx.coroutines.launch
  * ViewModel for SleepTrackerFragment.
  */
 class SleepTrackerViewModel(
-    val database: SleepDatabaseDao,
-    application: Application
+        val database: SleepDatabaseDao,
+        application: Application
 ) : AndroidViewModel(application) {
 
     private var tonight = MutableLiveData<SleepNight?>()
@@ -144,6 +144,7 @@ class SleepTrackerViewModel(
             tonight.value = getTonightFromDatabase()
         }
     }
+
     /**
      * Executes when the STOP button is clicked.
      */

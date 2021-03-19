@@ -14,7 +14,8 @@ import kotlinx.coroutines.launch
  */
 class SleepQualityViewModel(
     private val sleepNightKey: Long = 0L,
-    dataSource: SleepDatabaseDao) : ViewModel() {
+    dataSource: SleepDatabaseDao
+) : ViewModel() {
 
     /**
      * Hold a reference to SleepDatabase via its SleepDatabaseDao.
