@@ -46,9 +46,9 @@ Welcome to the Android Kotlin Fundamentals course, created by the Google Develop
 
 <img src="https://raw.githubusercontent.com/rezaerbe/android-fundamentals/master/Screenshot/RecyclerView3.jpg?raw=true" width=25% /> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/rezaerbe/android-fundamentals/master/Screenshot/RecyclerView4.jpg?raw=true" width=25% />
 
-### Mars Real Eastate App
+### Mars Real Estate App
 
-<img src="https://raw.githubusercontent.com/rezaerbe/android-fundamentals/master/Screenshot/MarsRealEastate1.jpg?raw=true" width=25% /> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/rezaerbe/android-fundamentals/master/Screenshot/MarsRealEastate2.jpg?raw=true" width=25% /> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/rezaerbe/android-fundamentals/master/Screenshot/MarsRealEastate3.jpg?raw=true" width=25% />
+<img src="https://raw.githubusercontent.com/rezaerbe/android-fundamentals/master/Screenshot/MarsRealEstate1.jpg?raw=true" width=25% /> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/rezaerbe/android-fundamentals/master/Screenshot/MarsRealEstate2.jpg?raw=true" width=25% /> &nbsp; &nbsp; <img src="https://raw.githubusercontent.com/rezaerbe/android-fundamentals/master/Screenshot/MarsRealEstate3.jpg?raw=true" width=25% />
 
 ### DevBytes App
 
